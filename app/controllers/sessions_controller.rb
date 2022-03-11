@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         redirect_to "/places"
         flash[:notice] = "Welcome to Travel Journal"
       else
-        flash[:notice] = "Incorrect ID or Password!"
+        flash[:notice] = "Incorrect Username or Password!"
         redirect_to "/sessions/new"
       end
     else

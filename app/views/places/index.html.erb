@@ -1,23 +1,10 @@
-<% if @current_user%>
-
   <h1>Places</h1>
-
   <p>
     <a href="/places/new/" class="btn btn-primary">New Place</a>
   </p>
-
-<% else %>
-
-  <h3> Please Login! </h3>
-
-<% end %>
 
 <% for place in @places %>
   <h4>
     <a href="/places/<%= place.id %>"><%= place.name %></a>
   </h4>
 <% end %>
-
-
-
-
