@@ -11,7 +11,7 @@ class PostsController < ApplicationController
       @post.user_id = @current_user.id
       @post.save
     else
-      flash[:notice] = "Login first."
+      flash[:notice] = "Login first!"
     end
     redirect_to "/places/#{@post.place.id}"
   end

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if @user
       if BCrypt::Password.new(@user.password) == params["password"]
         session[:user_id] = @user.id
-        flash[:notice] = "Welcome."
+        flash[:notice] = "Welcome to Tacostagram"
         redirect_to "/posts"
       else
         flash[:notice] = "Incorrect ID or Password!"
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    flash[:notice] = "Goodbye."
+    flash[:notice] = "Goodbye!"
     redirect_to "/sessions/new"
   end
 end
